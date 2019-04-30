@@ -3,7 +3,12 @@ package com.xxl.codegenerator.core.test;
 
 import com.xxl.codegenerator.admin.core.CodeGeneratorTool;
 import com.xxl.codegenerator.admin.core.model.ClassInfo;
+import com.xxl.codegenerator.admin.util.PrintJavaUtils;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -13,7 +18,11 @@ import java.io.InputStreamReader;
 /**
  * @author xuxueli 2018-05-02 20:30:38
  */
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class CodeGeneratorToolTest {
+    @Autowired
+    PrintJavaUtils printJavaUtils;
 
     @Test
     public void codeGeneratorToolTest() throws IOException  {
